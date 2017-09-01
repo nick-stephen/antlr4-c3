@@ -18,7 +18,7 @@
   </repositories>
 
   <scm>
-    <developerConnection>scm:git:https://github.com/mike-lischke/antlr4-c3.git/tags/antlr4-c3-1.0.0</developerConnection>
+    <developerConnection>scm:git:git@github.com:nick-stephen/antlr4-c3.git</developerConnection>
   </scm>
 
   <distributionManagement>
@@ -71,8 +71,10 @@
         <version>2.5.3</version>
         <configuration>
           <mavenExecutorId>forked-path</mavenExecutorId>
-          <useReleaseProfile>false</useReleaseProfile>
+          <releaseProfiles>release</releaseProfiles>
           <arguments>-Psonatype-oss-release</arguments>
+          <tag>ports/java-tag-${project.version}</tag>
+	  <autoVersionSubmodules>true</autoVersionSubmodules>
         </configuration>
       </plugin>
       <plugin>
